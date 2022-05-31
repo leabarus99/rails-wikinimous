@@ -1,0 +1,16 @@
+<div class="container">
+  <p class="back"><%= link_to "Back to list", articles_path %></p>
+  <h1><%= @article.title %></h1>
+  <h2><%= @article.subtitle %></h2>
+  <p><%= @article.content %></p>
+
+  <div class="choices">
+  <p class="choice"><%= link_to "Edit article", edit_article_path %></p>
+
+  <p class="choice"><%= link_to "Delete #{@article.title}",
+              article_path(@article),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %></p>
+
+  </div>
+</div>
